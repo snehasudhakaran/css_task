@@ -1,0 +1,115 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 25px;
+}
+
+.navbar h1{
+    font-size: 22px;
+}
+
+.navbar h1:hover{
+    color: rgb(6, 14, 126);
+}
+
+.navbar .brand img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+}
+
+.navbar .brand{
+    display:flex;
+    gap:10px;
+}
+
+.navbar .nav{
+    display:flex;
+    gap:50px;
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    position: relative;
+}
+
+a:hover{
+    color: rgb(6, 14, 126);
+}
+
+a::after{
+    position: absolute;
+    content:"";
+    bottom:-5px;
+    left:0px;
+    width:0px;
+    transition: width 0.5s;
+    height:2px;
+    background-color: rgb(6, 14, 126);
+}
+
+a:hover::after{
+    width:100%;
+}
+
+.container{
+    background: url("spec.jpg");
+    width:100%;
+    height:450px;
+    color:white;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 50px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.container::after{
+    position: absolute;
+    content: "";
+    width:100%;
+    height:450px;
+    background-color: rgb(0,0,0,0.7);
+    top:0px;
+    left:0px;
+}
+
+.con{
+    width:50%;
+    z-index: 3;
+    padding-right: 20px;
+}
+
+@media only screen and (min-device-width:320px) and (max-device-width:400px){
+    .con{
+        width:100%;
+        margin-left: -13px !important;
+    }
+    .navbar{
+        display:grid;
+        grid-template-columns: 100%;
+        margin-top: 20px;
+    }
+    .nav{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .nav{
+        gap: 32px !important;
+    }
+}
+
+
+
+
